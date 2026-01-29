@@ -2,42 +2,58 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Loading...</title>
+
 <style>
 html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+  margin:0!important;
+  padding:0!important;
+  width:100%;
+  height:100%;
+  overflow:hidden!important;
+  background:#000!important;
 }
-.separator {
-  width: 100%;
-  height: 100vh;
+
+/* Fullscreen landing */
+.video-wrap{
+  position:fixed;
+  inset:0;
+  width:100vw;
+  height:100vh;
+  z-index:9999;
+  background:#000;
 }
-.separator a {
-  display: block;
-  width: 100%;
-  height: 100%;
+.video-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
 }
-.separator img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+/* Click layer */
+.click-layer{
+  position:absolute;
+  inset:0;
+  cursor:pointer;
 }
 </style>
 </head>
+
 <body>
 
-<div class="separator" style="clear: both;">
-  <a href="javascript:void(0)"
-     onclick="location.href='https://petsrulefondness.com/g8htu6fn9?key=b8eedfbc01329bff8c2b6da1a062f8c2';"
-     style="display: block; padding: 0; text-align: center;">
-    <img alt="" border="0"
-      data-original-height="1977"
-      data-original-width="1080"
-      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJlcPUpulA-hwcFPyWvIAsxjxtYmXr3Y7BaB3wDh9qfRskax_qNNffZy7aSj7TOiKhyFw10uSToWJJEDTyucwAuGv30CgWOm3dXy2QrOXDGmp-lsXUU08Hmx46NvY7iBMBmmsFhZSh5bNH99_xS7PDZ2X5iJ94HxjA_hd0R1Ru2suWNubpi2Dp1iYVMyc/s1977/12613.jpg"/>
-  </a>
+<div class="video-wrap">
+  <!-- THUMBNAIL SESUAI YANG KAMU KASIH -->
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJlcPUpulA-hwcFPyWvIAsxjxtYmXr3Y7BaB3wDh9qfRskax_qNNffZy7aSj7TOiKhyFw10uSToWJJEDTyucwAuGv30CgWOm3dXy2QrOXDGmp-lsXUU08Hmx46NvY7iBMBmmsFhZSh5bNH99_xS7PDZ2X5iJ94HxjA_hd0R1Ru2suWNubpi2Dp1iYVMyc/s1977/12613.jpg">
+  <div class="click-layer" id="clickLayer"></div>
 </div>
+
+<script>
+document.getElementById("clickLayer").onclick = function () {
+  location.href = "https://petsrulefondness.com/g8htu6fn9?key=b8eedfbc01329bff8c2b6da1a062f8c2";
+};
+</script>
 
 </body>
 </html>
